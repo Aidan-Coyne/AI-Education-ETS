@@ -178,7 +178,7 @@ header.main-header {
 
 .nav-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: 80px;
 }
@@ -187,6 +187,13 @@ header.main-header {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(28, 25, 23, 0.08));
 }
 
 .logo-dot {
@@ -276,6 +283,7 @@ header.main-header {
     .nav-menu {
         display: none;
     }
+
     .menu-toggle {
         display: flex;
     }
@@ -286,9 +294,84 @@ header.main-header {
    ========================================================================== */
 .hero {
     position: relative;
-    padding: 120px 0 80px 0;
-    background: radial-gradient(circle at 80% 20%, var(--primary-light) 0%, transparent 60%);
+    padding: 50px 0 80px 0;
+    background: radial-gradient(circle at 50% 30%, var(--primary-light) 0%, transparent 70%);
     overflow: hidden;
+}
+
+/* Centered Hero Layout */
+.hero-container-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.hero-logo-wrap {
+    margin-bottom: 16px;
+    display: inline-block;
+}
+
+.hero-badge-icon {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    filter: drop-shadow(0 12px 28px rgba(225, 90, 66, 0.15));
+    animation: float 6s ease-in-out infinite;
+}
+
+.hero-content-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-content-centered h1 {
+    font-size: 3.5rem;
+    line-height: 1.15;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+}
+
+.hero-content-centered h1 span {
+    color: var(--primary);
+}
+
+.hero-content-centered .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-body);
+    margin-bottom: 32px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-content-centered .hero-actions {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 40px;
+    justify-content: center;
+}
+
+.hero-content-centered .hero-meta {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 48px;
+    justify-content: center;
+}
+
+.hero-visual-centered {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 .hero-grid {
@@ -1379,7 +1462,8 @@ header.main-header {
 /* Console Panel styling - Light Theme */
 .terminal-panel {
     border: 1px solid var(--border);
-    background-color: #FAF8F5; /* Matches soft sand website background */
+    background-color: #FAF8F5;
+    /* Matches soft sand website background */
     color: var(--text-body);
     box-shadow: var(--shadow-sm);
     overflow: hidden;
@@ -1403,9 +1487,17 @@ header.main-header {
     display: inline-block;
 }
 
-.terminal-panel .dot.red { background-color: #EF4444; }
-.terminal-panel .dot.yellow { background-color: #F59E0B; }
-.terminal-panel .dot.green { background-color: #10B981; }
+.terminal-panel .dot.red {
+    background-color: #EF4444;
+}
+
+.terminal-panel .dot.yellow {
+    background-color: #F59E0B;
+}
+
+.terminal-panel .dot.green {
+    background-color: #10B981;
+}
 
 .terminal-panel .panel-title {
     font-size: 0.8rem;
@@ -1521,11 +1613,28 @@ header.main-header {
     word-break: break-word;
 }
 
-.console-line.system { color: var(--text-muted); }
-.console-line.thought { color: var(--primary-dark); font-weight: 600; }
-.console-line.tool { color: #D97706; } /* Darker Amber */
-.console-line.knowledge { color: var(--secondary-dark); }
-.console-line.output { color: var(--primary); font-weight: 600; }
+.console-line.system {
+    color: var(--text-muted);
+}
+
+.console-line.thought {
+    color: var(--primary-dark);
+    font-weight: 600;
+}
+
+.console-line.tool {
+    color: #D97706;
+}
+
+/* Darker Amber */
+.console-line.knowledge {
+    color: var(--secondary-dark);
+}
+
+.console-line.output {
+    color: var(--primary);
+    font-weight: 600;
+}
 
 .sim-actions {
     display: flex;
@@ -1614,7 +1723,7 @@ header.main-header {
         position: relative !important;
         /* Safe length calculation capped at max desktop height (350px + padding) */
         height: calc(0.7 * min(500px, calc(100vw - var(--diagram-offset))) + 32px) !important;
-        overflow: hidden !important; 
+        overflow: hidden !important;
         padding: 0 !important;
     }
 
@@ -1638,7 +1747,8 @@ header.main-header {
 
 @media (max-width: 480px) {
     .diagram-panel {
-        --diagram-offset: 106px; /* Accommodates tight padding on budget devices */
+        --diagram-offset: 106px;
+        /* Accommodates tight padding on budget devices */
     }
 }
 
@@ -1772,7 +1882,8 @@ header.main-header {
 }
 
 /* Brain ripple animations */
-.brain-ripple, .brain-ripple-2 {
+.brain-ripple,
+.brain-ripple-2 {
     position: absolute;
     top: 0;
     left: 0;
@@ -1797,6 +1908,7 @@ header.main-header {
         transform: scale(1);
         opacity: 0.8;
     }
+
     100% {
         transform: scale(1.4);
         opacity: 0;
@@ -2372,21 +2484,21 @@ a.tool-card:hover {
         gap: 40px !important;
         text-align: center !important;
     }
-    
+
     .hero-content h1 {
         font-size: 2.25rem !important;
     }
-    
+
     .hero-subtitle {
         font-size: 1.1rem !important;
         margin-left: auto !important;
         margin-right: auto !important;
     }
-    
+
     .hero-actions {
         justify-content: center !important;
     }
-    
+
     /* FIX: Force the visual wrapper block to center perfectly on the screen */
     .hero-visual {
         display: flex !important;
@@ -2396,13 +2508,13 @@ a.tool-card:hover {
         margin-top: 20px !important;
         overflow: visible !important;
     }
-    
+
     /* OPTION A: Scale down the circle cleanly for small mobile displays */
     .visual-globe {
         width: 240px !important;
         height: 240px !important;
     }
-    
+
     /* Adjust the floating phase card position so it nests nicely on tiny mobile frames */
     .visual-inner-card {
         width: 190px !important;
