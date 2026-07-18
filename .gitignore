@@ -1,0 +1,11 @@
+# Ignore builder layout document
+AI Education HTML Layout.html
+
+# Ignore environment config and credentials
+.env
+credentials.json
+token.json
+
+# Ignore temporary logs and directories
+.tmp/
+*.log
