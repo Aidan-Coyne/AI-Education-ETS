@@ -707,7 +707,7 @@ header.main-header {
 .stage-bullets li {
     position: relative;
     padding-left: 28px;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
 }
 
 .stage-bullets li::before {

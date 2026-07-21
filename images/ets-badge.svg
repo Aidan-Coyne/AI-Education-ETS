@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+    <defs>
+        <!-- Gold Metallic Gradient -->
+        <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FFEFA6" />
+            <stop offset="30%" stop-color="#F59E0B" />
+            <stop offset="70%" stop-color="#D97706" />
+            <stop offset="100%" stop-color="#78350F" />
+        </linearGradient>
+
+        <!-- Blue Metal Gradient for Torch and Ribbon -->
+        <linearGradient id="blue-metal" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#3B82F6" />
+            <stop offset="30%" stop-color="#1D4ED8" />
+            <stop offset="70%" stop-color="#1E3A8A" />
+            <stop offset="100%" stop-color="#0F172A" />
+        </linearGradient>
+
+        <!-- Light Silver for base of crown -->
+        <linearGradient id="silver-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FFFFFF" />
+            <stop offset="50%" stop-color="#D4D4D8" />
+            <stop offset="100%" stop-color="#71717A" />
+        </linearGradient>
+
+        <!-- Flame Gradients -->
+        <linearGradient id="flame-red" x1="0%" y1="100%" x2="0%" y2="0%">
+            <stop offset="0%" stop-color="#EF4444" />
+            <stop offset="100%" stop-color="#B91C1C" />
+        </linearGradient>
+        <linearGradient id="flame-orange" x1="0%" y1="100%" x2="0%" y2="0%">
+            <stop offset="0%" stop-color="#F97316" />
+            <stop offset="100%" stop-color="#C2410C" />
+        </linearGradient>
+        <linearGradient id="flame-yellow" x1="0%" y1="100%" x2="0%" y2="0%">
+            <stop offset="0%" stop-color="#FDE047" />
+            <stop offset="100%" stop-color="#EAB308" />
+        </linearGradient>
+
+        <!-- Velvet for Crown -->
+        <linearGradient id="velvet-red" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#DC2626" />
+            <stop offset="100%" stop-color="#7F1D1D" />
+        </linearGradient>
+
+        <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="4" stdDeviation="5" flood-opacity="0.2" />
+        </filter>
+    </defs>
+
+    <g filter="url(#shadow)">
+        <!-- 1. TORCH UNDERLAY (Renders behind the crown/scroll) -->
+        <!-- Torch Handle Base -->
+        <circle cx="100" cy="188" r="4.5" fill="url(#gold-grad)" stroke="#78350F" stroke-width="0.75" />
+        
+        <!-- Torch Handle (tapered shaft) -->
+        <path d="M 98,188 L 94,65 L 106,65 L 102,188 Z" fill="url(#blue-metal)" stroke="url(#gold-grad)" stroke-width="1.25" />
+
+        <!-- Torch Bowl -->
+        <path d="M 94,65 L 85,42 C 85,42 100,40 115,42 L 106,65 Z" fill="url(#blue-metal)" stroke="url(#gold-grad)" stroke-width="1.25" />
+        <!-- Gold Rims on Bowl -->
+        <!-- Bottom Rim -->
+        <path d="M 93,65 C 93,65 100,67 107,65 L 106,68 C 106,68 100,70 94,68 Z" fill="url(#gold-grad)" />
+        <!-- Top Rim -->
+        <path d="M 83,40 C 83,40 100,43 117,40 L 115,44 C 115,44 100,47 85,44 Z" fill="url(#gold-grad)" />
+
+        <!-- 2. FLAMES (Rising from the bowl) -->
+        <g id="torch-flames">
+            <!-- Outer Red Flame -->
+            <path d="M 100,6 C 85,25 74,32 78,43 C 80,48 90,43 100,43 C 110,43 120,48 122,43 C 126,32 115,25 100,6 Z" fill="url(#flame-red)" />
+            <!-- Middle Orange Flame -->
+            <path d="M 100,15 C 88,30 82,34 85,43 C 86,46 93,42 100,42 C 107,42 114,46 115,43 C 118,34 112,30 100,15 Z" fill="url(#flame-orange)" />
+            <!-- Inner Yellow Flame -->
+            <path d="M 100,24 C 92,34 88,36 90,43 C 91,45 96,42 100,42 C 104,42 109,45 110,43 C 112,36 108,34 100,24 Z" fill="url(#flame-yellow)" />
+        </g>
+
+        <!-- 3. SCROLL WINGS (Drawn behind the main front scroll) -->
+        <!-- Left Wing Fold -->
+        <path d="M 46,134 C 36,122 28,128 28,140 C 28,154 44,158 52,148 Z" fill="url(#gold-grad)" stroke="#78350F" stroke-width="0.75" />
+        <path d="M 44,136 C 36,126 30,131 30,140 C 30,151 43,154 50,146 Z" fill="url(#blue-metal)" />
+
+        <!-- Right Wing Fold -->
+        <path d="M 154,134 C 164,122 172,128 172,140 C 172,154 156,158 148,148 Z" fill="url(#gold-grad)" stroke="#78350F" stroke-width="0.75" />
+        <path d="M 156,136 C 164,126 170,131 170,140 C 170,151 157,154 150,146 Z" fill="url(#blue-metal)" />
+
+        <!-- 4. THE CROWN (Superimposed in the center of the handle) -->
+        <!-- Velvet Dome Cap -->
+        <path d="M 72,108 C 72,82 128,82 128,108 Z" fill="url(#velvet-red)" stroke="#5A0F11" stroke-width="0.75" />
+        
+        <!-- Crown Arches (Gold) -->
+        <path d="M 70,108 C 70,88 92,84 100,86 C 108,84 130,88 130,108 C 130,108 122,108 122,108 C 122,92 108,90 100,92 C 92,90 78,92 78,108 Z" fill="url(#gold-grad)" stroke="#78350F" stroke-width="0.75" />
+        <!-- Central vertical arch -->
+        <path d="M 98.5,86 L 98.5,108 L 101.5,108 L 101.5,86 Z" fill="url(#gold-grad)" stroke="#78350F" stroke-width="0.5" />
+        
+        <!-- Orb and Cross on top -->
+        <circle cx="100" cy="80" r="3.5" fill="url(#gold-grad)" stroke="#78350F" stroke-width="0.75" />
+        <path d="M 96.5,73.5 L 103.5,73.5 M 100,70 L 100,77" stroke="url(#gold-grad)" stroke-width="1.5" stroke-linecap="round" />
+
+        <!-- Base Silver Circlet Band -->
+        <path d="M 68,108 C 68,105 132,105 132,108 L 132,114 C 132,117 68,117 68,114 Z" fill="url(#silver-grad)" stroke="#52525B" stroke-width="0.75" />
+        <!-- Jewels on Base Band -->
+        <circle cx="76" cy="111" r="1.5" fill="#EF4444" />
+        <circle cx="88" cy="111" r="1.5" fill="#FFFFFF" />
+        <circle cx="100" cy="111" r="1.5" fill="#10B981" />
+        <circle cx="112" cy="111" r="1.5" fill="#FFFFFF" />
+        <circle cx="124" cy="111" r="1.5" fill="#EF4444" />
+        
+        <!-- Ermine Fur Band (White with black spots) -->
+        <path d="M 70,114 C 70,114 100,118 130,114 L 128,118 C 128,118 100,122 72,118 Z" fill="#FFFFFF" stroke="#D4D4D8" stroke-width="0.5" />
+        <!-- Ermine Spots -->
+        <circle cx="80" cy="116" r="0.75" fill="#000000" />
+        <circle cx="92" cy="117" r="0.75" fill="#000000" />
+        <circle cx="100" cy="117" r="0.75" fill="#000000" />
+        <circle cx="108" cy="117" r="0.75" fill="#000000" />
+        <circle cx="120" cy="116" r="0.75" fill="#000000" />
+
+        <!-- Crosses and Fleur-de-lis on Band rim -->
+        <!-- Center Fleur-de-lis -->
+        <path d="M 100,99 L 98,105 L 102,105 Z M 97,101 C 97,105 100,105 100,105 C 100,105 103,105 103,101 Z" fill="url(#gold-grad)" stroke="#78350F" stroke-width="0.5" />
+        <!-- Left Cross -->
+        <path d="M 82,100 L 86,100 L 86,104 L 82,104 Z" fill="url(#gold-grad)" stroke="#78350F" stroke-width="0.5" />
+        <!-- Right Cross -->
+        <path d="M 114,100 L 118,100 L 118,104 L 114,104 Z" fill="url(#gold-grad)" stroke="#78350F" stroke-width="0.5" />
+
+        <!-- 5. FRONT SCROLL BANNER -->
+        <g id="main-scroll">
+            <!-- Scroll Base -->
+            <path d="M 48,135 C 75,155 125,155 152,135 L 146,153 C 122,171 78,171 54,153 Z" fill="url(#blue-metal)" stroke="url(#gold-grad)" stroke-width="1.75" />
+            <!-- ETS Text on Scroll -->
+            <text x="100" y="153" font-family="'Outfit', sans-serif" font-weight="900" font-size="12" fill="url(#gold-grad)" text-anchor="middle" letter-spacing="1.5" filter="drop-shadow(0px 1px 1px rgba(0,0,0,0.5))">ETS</text>
+        </g>
+    </g>
+</svg>
